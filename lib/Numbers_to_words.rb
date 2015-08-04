@@ -1,4 +1,10 @@
 class Fixnum
+
+  define_method(:ones_teens_logic) do
+    digits.fetch(self)
+  end
+
+
   define_method(:Numbers_to_words) do
 
     digits = {0 => "zero",
@@ -31,8 +37,14 @@ class Fixnum
             8 => "eighty",
             9 => "ninety"}
 
+
+
+
+
     if digits.include?(self)
-      final_string = digits.fetch(self)
+      final_string = self.ones_teens_logic()
+
+
     else
       number_array = self.to_s.split(//) #breaking number array into string
       array_length = number_array.length()
@@ -41,8 +53,10 @@ class Fixnum
           ones_place = digits.fetch(number_array[1].to_i).to_s
           final_string = [tens_place, ones_place].join(' ')
         elsif array_length == 3
+          hundreds_place = number_array[0].join(" hundred")
 
-          final_string = [].join(' ')
+
+          # final_string = [].join(' ')
         end
 
 

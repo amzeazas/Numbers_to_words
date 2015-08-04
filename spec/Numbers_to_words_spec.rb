@@ -1,5 +1,6 @@
 require('rspec')
 require('Numbers_to_words')
+require('ones_teens_logic')
 
 describe('Fixnum#Numbers_to_words') do
   it("Turns single-digit numbers in numeric form into written words") do
