@@ -7,7 +7,7 @@ describe('Fixnum#Numbers_to_words') do
   end
 
   it("Turns double-digit numbers in numeric form into written words") do
-    expect(13.Numbers_to_words()).to(eq("thirteen"))
+    expect(25.Numbers_to_words()).to(eq("twenty five"))
   end
-  
+
 end
