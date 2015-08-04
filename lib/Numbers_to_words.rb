@@ -40,6 +40,9 @@ class Fixnum
           tens_place = tens.fetch(number_array[0].to_i).to_s
           ones_place = digits.fetch(number_array[1].to_i).to_s
           final_string = [tens_place, ones_place].join(' ')
+        elsif array_length == 3
+
+          final_string = [].join(' ')
         end
 
 
